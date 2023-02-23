@@ -1,2 +1,5 @@
 # ltpii-1.23
-Códigos das aulas da disciplina Linguagem Técnica de Programação II - 3ºAD - mat - 1.2023
+Faculdade Senac de Tecnologia e Inovação  
+Disciplina Linguagem Técnica de Programação II  
+Turma 3ºADS - matutino - 1.2023  
+Prof. Marcio Araya  
