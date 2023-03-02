@@ -2,7 +2,7 @@
 // salvar como conta.class.php em C:\XAMPP\HTDOCS\OBJ
 class Conta {
 //atributos
-private $Saldo;
+protected $Saldo;
 protected $Numero;
 
 // métodos

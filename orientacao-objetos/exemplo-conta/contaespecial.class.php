@@ -1,5 +1,6 @@
 <?php
 // contaespecial.class.php
+include_once "conta.class.php";
 class ContaEspecial extends Conta {
 	
 protected $Limite;
@@ -11,7 +12,7 @@ protected $Limite;
  
   function Sacar($v) {
 	if (($this->ObterSaldo() + $this->Limite)>= $v) {
-      $this->Depositar(-$v);
+      $this->Saldo -= $v;
     } else {
 		echo "Saldo insuficiente<br>";
 	}
