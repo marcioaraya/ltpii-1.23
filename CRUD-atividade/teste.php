@@ -26,7 +26,7 @@ $contato1 = new Contato( "Alexandre Barbosa", "teste@teste.com.br", "11999999999
 $PersitenciaContato1 = new DaoContato();
 // Para persistencia de dados do objeto contato, usamos o método create passando o nosso objeto de contato como parâmetro
 if($PersitenciaContato1->create($contato1)){
-       echo 'Inseridos no banco com Êxito';
+       echo '<p>Inseridos no banco com Êxito</p>';
 }
 
 /* Agora podemos testar outra funcionalidade, recuperar os dados persistidos
@@ -36,6 +36,7 @@ if($PersitenciaContato1->create($contato1)){
 */
 
 var_dump($PersitenciaContato1->read(1));
+echo "<hr>";
 //Note que poderíamos criar um novo objeto com os dados de contato apenas desta forma:
 $contato2 = $PersitenciaContato1->read(1);
 // O número 1, indica o ID do registro no banco de dados.
@@ -44,11 +45,12 @@ $contato1->setNome("João Silva");
 $contato1->setEmail("joao@teste.com.br");
 // Então chamamos o método de update do nosso DAO passando o objeto de contato.
 if($PersitenciaContato1->update($contato1)){
-       echo 'Atualizado no banco com Êxito';
+       echo '<p>Atualizado no banco com Êxito</p>';
 }
 //Vamos conferir a atualização realizada com o método read do nosso DAO
 var_dump($PersitenciaContato1->read(1));
+echo "<hr>";
 // E para excluirmos? usamos o método delete do nosso DAO, informando o ID como parâmetro
 if($PersitenciaContato1->delete(1)){
-    echo 'Excluído do banco com Êxito';
+    echo '<p>Excluído do banco com Êxito</p>';
 }
