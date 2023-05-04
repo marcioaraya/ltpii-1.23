@@ -26,7 +26,7 @@
                  try {
                      $dsn = "mysql:host=localhost;dbname=exemplocrud";
                      $usuario = "root";
-                     $senha = ""; // Preencha aqui com a senha do seu servidor de banco de dados.
+                     $senha = "senac"; // Preencha aqui com a senha do seu servidor de banco de dados.
                      
                      // Instânciado um novo objeto PDO informando o DSN e parâmetros de Array
                      self::$instancia = new PDO( $dsn, $usuario, $senha );

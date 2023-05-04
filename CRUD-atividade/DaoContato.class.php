@@ -45,6 +45,23 @@ class DaoContato implements iDaoModeCrud {
        }
        /**
        *
+       * readAll: Retorna um objeto refletindo um contato
+       *
+       * @return vetor
+       */
+      public function readAll() {
+         $sqlStmt = "SELECT * from {$this->tabela} ORDER BY NOME;" ;
+         try {
+            $operacao = $this->instanciaConexaoPdoAtiva->prepare($sqlStmt);
+            $operacao->execute();
+            $linhas = $operacao->fetchAll(PDO::FETCH_ASSOC);
+            return $linhas;
+         } catch( PDOException $excecao ){
+            echo $excecao->getMessage();
+         }
+      }
+      /**
+       *
        * read: Retorna um objeto refletindo um contato
        *
        * @param int $id

@@ -24,6 +24,30 @@ if(file_exists( "{$classe}.php" )) {
 $contato1 = new Contato( "Alexandre Barbosa", "teste@teste.com.br", "11999999999");
 // Então primeiro criamos um novo objeto DAO
 $PersitenciaContato1 = new DaoContato();
+/*
+echo '<pre>';
+var_dump($PersitenciaContato1->readAll());
+echo '</pre>';
+*/
+
+$contatos = $PersitenciaContato1->readAll();
+echo '<table border="1">';
+foreach($contatos as $linha){
+   echo '<tr>';
+   echo "<td>". $linha['ID'] ."</td>";
+   echo "<td>". $linha['NOME']." </td>";
+   echo "<td>". $linha['EMAIL']." </td>";
+   echo "<td>". $linha['TELEFONE']." </td>";
+   echo "<td><a href=\"apagar.php?id=". $linha['ID']."\">Apagar</a> </td>";
+   
+   
+   echo '</tr>';
+}
+echo '</table>';
+
+
+die();
+
 // Para persistencia de dados do objeto contato, usamos o método create passando o nosso objeto de contato como parâmetro
 if($PersitenciaContato1->create($contato1)){
        echo '<p>Inseridos no banco com Êxito</p>';
