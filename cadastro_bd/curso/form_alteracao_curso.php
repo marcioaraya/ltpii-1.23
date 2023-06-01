@@ -2,8 +2,14 @@
 <!DOCTYPE html>
 <!-- form_alteracao.html -->
 <?php
+// examine como foi implementado a alteração da tb_aluno
+// para implementar a alteração a sugestão é receber apenas o "id"
+// use a função recupera_curso($id) que deve ser criada dentro do arquivo /inc/funcoes.inc.php
+
  $id = $_GET["id"];
  $curso = urldecode($_GET["curso"]);
+
+
 ?>
 
 <html>
