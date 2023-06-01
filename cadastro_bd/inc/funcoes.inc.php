@@ -78,6 +78,8 @@ function monta_select_curso(){
 // monta_select_curso();  
   
   
+// sugestão - criar a função recupera_curso($id) 
+// para usar na alteração da tb_curso
 
 
 

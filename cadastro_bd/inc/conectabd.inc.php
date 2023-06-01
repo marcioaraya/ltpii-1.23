@@ -1,6 +1,6 @@
   <?php
   // conectabd.inc.php
-  $link = mysqli_connect("localhost", "root", "", "curso");
+  $link = mysqli_connect("localhost", "aplicacao_curso", "curso123", "curso");
   
   // mysqli_connect_errno - devolve o código do erro
   if (mysqli_connect_errno()) {
